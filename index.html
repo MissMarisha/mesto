@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="./pages/index.css" >
+    <script src="./index.js" defer></script>
+    <script></script>
+    <title>Место</title>
+  </head>
+  <body class="body">
+    <div class="page">
+      <header class="header">
+        <img class="header__logo" src="./images/logo.svg" alt="лого">
+        <div class="header__line"></div>
+      </header>
+      <main class="content">
+        <section class="profile page__content">
+          <div class="profile__all">
+            <img class="profile__avatar" src="./images/image.jpg" alt="аватар">
+            <div class="profile__info">
+              <div class="profile__info-row">
+                <h1 class="profile__name">Жак-Ив Кусто</h1>
+                <button class="profile__edit-button">
+                <img src="./images/white-pan.svg" alt="Редактировать">
+                </button> 
+              </div>
+              <p class="profile__occupation">Исследователь океана</p>
+            </div>
+          </div>
+          <button class="profile__add-button"><img src="./images/+.svg" alt="Добавить"></button>
+        </section>
+        <section class="elements page__content">
+          <div class="element">
+            <div class="element__info">
+              <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
+              <div class="element__description">
+                <h2 class="element__text">Карачаевск</h2>
+                <img class="like" src="./images/Vector.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="element">
+            <div class="element__info">
+              <img class="element__img" src="./images/kirill-pershin-1404681-unsplash.png" alt="Эльбрус">
+              <div class="element__description">
+                <h2 class="element__text">Гора Эльбрус</h2>
+                <img class="like" src="./images/Vector.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="element">
+            <div class="element__info">
+              <img class="element__img" src="./images/kirill-pershin-1556355-unsplash.png" alt="Домбай">
+              <div class="element__description">
+                <h2 class="element__text">Домбай</h2>
+                <img class="like" src="./images/Vector.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="element">
+            <div class="element__info">
+              <img class="element__img" src="./images/kirill-pershin-1404681-unsplash.png" alt="Эльбрус">
+              <div class="element__description">
+                <h2 class="element__text">Гора Эльбрус</h2>
+                <img class="like" src="./images/Vector.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="element">
+            <div class="element__info">
+              <img class="element__img" src="./images/kirill-pershin-1556355-unsplash.png" alt="Домбай">
+              <div class="element__description">
+                <h2 class="element__text">Домбай</h2>
+                <img class="like" src="./images/Vector.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="element">
+            <div class="element__info">
+              <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
+              <div class="element__description">
+                <h2 class="element__text">Карачаево-Черкессия</h2>
+                <img class="like" src="./images/Vector.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer page__content">
+        <p class="footer__caption">© 2023 Mesto Russia</p>
+      </footer>
+    </div>
+    <div class="popup ">
+      <form class="popup__container">
+        <h2 class="popup__title">Редактировать Профиль</h2>
+        <input class="popup__input popup__input_type_name" type="text" placeholder="Имя">
+        <input class="popup__input popup__input_type_job" type="text" placeholder="Должность">
+        <button type="submit" class="popup__save-button">
+        Сохранить
+        </button>
+        <button type="button" class="popup__close-button"></button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+.like {
+  width: 22px;
+  padding-right: 20px;
+
+  cursor: pointer;
+  align-self: center;
+  height: 19px;
+}
+.like:hover {
+  opacity: 0.5;
+}
