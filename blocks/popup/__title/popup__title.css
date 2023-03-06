@@ -3,19 +3,16 @@
   font-size: 24px;
   font-weight: 900;
   line-height: 29px;
-  margin: 0 0 54px;
+  margin: 0 0 44px;
   max-width: 330px;
   padding: 0;
 }
-@media (max-width: 640px) {
-    .popup__title{
-     margin-bottom: 75px;
-    
-      }
-}
+
 @media (max-width: 644px) {
-    .popup__title{
-        font-size: 18px;
+  .popup__title {
+    font-size: 18px;
     line-height: 22px;
-      }
+    margin-bottom: 75px;
+    max-width: 238px;
+  }
 }

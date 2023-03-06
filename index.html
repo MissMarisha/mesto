@@ -4,15 +4,13 @@
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <link rel="stylesheet" href="./pages/index.css" >
-    <script src="./index.js" defer></script>
-    <script></script>
+    <script src="./scripts/index.js" defer></script>
     <title>Место</title>
   </head>
   <body class="body">
     <div class="page">
       <header class="header">
         <img class="header__logo" src="./images/logo.svg" alt="лого">
-        <div class="header__line"></div>
       </header>
       <main class="content">
         <section class="profile page__content">
@@ -21,69 +19,54 @@
             <div class="profile__info">
               <div class="profile__info-row">
                 <h1 class="profile__name">Жак-Ив Кусто</h1>
-                <button class="profile__edit-button">
+                <button type="button" class="profile__edit-button">
                 <img src="./images/white-pan.svg" alt="Редактировать">
                 </button> 
               </div>
               <p class="profile__occupation">Исследователь океана</p>
             </div>
           </div>
-          <button class="profile__add-button"><img src="./images/+.svg" alt="Добавить"></button>
+          <button type="button" class="profile__add-button"><img src="./images/+.svg" alt="Добавить"></button>
         </section>
         <section class="elements page__content">
           <div class="element">
-            <div class="element__info">
               <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
               <div class="element__description">
                 <h2 class="element__text">Карачаевск</h2>
-                <img class="like" src="./images/Vector.svg" alt="">
+                <button class="element__like" type="button"><img src="./images/Vector.svg" alt="Лайк"></button>
               </div>
-            </div>
           </div>
           <div class="element">
-            <div class="element__info">
+            
               <img class="element__img" src="./images/kirill-pershin-1404681-unsplash.png" alt="Эльбрус">
               <div class="element__description">
                 <h2 class="element__text">Гора Эльбрус</h2>
-                <img class="like" src="./images/Vector.svg" alt="">
-              </div>
-            </div>
+                <button class="element__like" type="button"><img src="./images/Vector.svg" alt="Лайк"></button>              </div>
+            
           </div>
           <div class="element">
-            <div class="element__info">
               <img class="element__img" src="./images/kirill-pershin-1556355-unsplash.png" alt="Домбай">
               <div class="element__description">
                 <h2 class="element__text">Домбай</h2>
-                <img class="like" src="./images/Vector.svg" alt="">
-              </div>
-            </div>
+                <button class="element__like" type="button"><img src="./images/Vector.svg" alt="Лайк"></button>              </div>
           </div>
           <div class="element">
-            <div class="element__info">
               <img class="element__img" src="./images/kirill-pershin-1404681-unsplash.png" alt="Эльбрус">
               <div class="element__description">
                 <h2 class="element__text">Гора Эльбрус</h2>
-                <img class="like" src="./images/Vector.svg" alt="">
-              </div>
-            </div>
+                <button class="element__like" type="button"><img src="./images/Vector.svg" alt="Лайк"></button>              </div>
           </div>
           <div class="element">
-            <div class="element__info">
               <img class="element__img" src="./images/kirill-pershin-1556355-unsplash.png" alt="Домбай">
               <div class="element__description">
                 <h2 class="element__text">Домбай</h2>
-                <img class="like" src="./images/Vector.svg" alt="">
-              </div>
-            </div>
+                <button class="element__like" type="button"><img src="./images/Vector.svg" alt="Лайк"></button>              </div>
           </div>
           <div class="element">
-            <div class="element__info">
               <img class="element__img" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
               <div class="element__description">
                 <h2 class="element__text">Карачаево-Черкессия</h2>
-                <img class="like" src="./images/Vector.svg" alt="">
-              </div>
-            </div>
+                <button class="element__like" type="button"><img src="./images/Vector.svg" alt="Лайк"></button>              </div>
           </div>
         </section>
       </main>
@@ -92,15 +75,17 @@
       </footer>
     </div>
     <div class="popup ">
-      <form class="popup__container">
-        <h2 class="popup__title">Редактировать Профиль</h2>
-        <input class="popup__input popup__input_type_name" type="text" placeholder="Имя">
-        <input class="popup__input popup__input_type_job" type="text" placeholder="Должность">
-        <button type="submit" class="popup__save-button">
-        Сохранить
-        </button>
+      <div class="popup__container">
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form name="editProfileForm" class="popup__form">
+          <input name ="Name" class="popup__input popup__input_type_name" type="text" placeholder="Имя">
+          <input name = "Job" class="popup__input popup__input_type_job" type="text" placeholder="Должность">
+          <button type="submit" class="popup__save-button">
+          Сохранить
+          </button>
+        </form>
         <button type="button" class="popup__close-button"></button>
-      </form>
+      </div>
     </div>
   </body>
 </html>
