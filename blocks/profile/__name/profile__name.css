@@ -9,13 +9,20 @@
   font-weight: 500;
   line-height: 48px;
 }
+@media (max-width: 1000px) {
+  .profile__name {
+    font-size: 29px;
+    line-height: 36px;
+    max-width: 234px;
+  }
+}
 @media (max-width: 640px) {
-    .profile__name {
-        font-size: 27px;
-        line-height: 33px;
-        margin-right: 10px;
-        padding-left: 25px;
-        align-self: center;
-        max-width: 210px;
-      }
+  .profile__name {
+    font-size: 27px;
+    line-height: 33px;
+    margin-right: 10px;
+    padding-left: 25px;
+    align-self: center;
+    max-width: 210px;
+  }
 }

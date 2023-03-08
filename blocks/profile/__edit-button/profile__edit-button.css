@@ -2,10 +2,10 @@
   background-color: #000000;
   border: 1px solid #fff;
   cursor: pointer;
-  justify-content: center;
   flex-shrink: 0;
-  margin-right: 30px;
+  justify-content: center;
   align-items: center;
+  margin-right: 20px;
   width: 24px;
   height: 24px;
 }
@@ -13,9 +13,9 @@
   opacity: 0.6;
 }
 @media (max-width: 640px) {
-    .profile__edit-button {
-        display: flex;
-        width: 18px;
-        height: 18px;
-      }
+  .profile__edit-button {
+    display: flex;
+    width: 18px;
+    height: 18px;
+  }
 }
