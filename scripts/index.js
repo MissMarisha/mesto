@@ -1,4 +1,3 @@
-const newCard = document.querySelector('#element__template');
 const closePopupButton = document.querySelector('.popup__close-button');
 const profilePopup = document.querySelector('.popup-profile');
 const editProfileButton = document.querySelector('.profile__edit-button');
@@ -9,18 +8,18 @@ const userNameInput = document.querySelector('.popup__input_type_name');
 const userOccupationInput = document.querySelector('.popup__input_type_job');
 const cardPopup = document.querySelector('.popup-card');
 const cardForm = document.querySelector('.popup__form_card');
-const addCardButton = document.querySelector('.profile__add-button');
+const cardAddButton = document.querySelector('.profile__add-button');
 const closeCardButton = document.querySelector('.popup-card__close-button');
 const cardsContainer = document.querySelector('.elements');
 const cardItem = document.querySelector('.element');
-const cardTemplate = document.querySelector('#element__template').content;
-addCardButton.addEventListener('click', openCreateCard);
+const cardTemplate = document.querySelector('#element__template');
+cardAddButton.addEventListener('click', openCreateCard);
 closeCardButton.addEventListener('click', closeCreateCard);
 const popupImage = document.querySelector('.popup-image');
 const popupImagePhoto = popupImage.querySelector('.popup-image__photo');
-const closePopupImageButton = popupImage.querySelector('.popup__close-button');
+const popupCloseImageButton = popupImage.querySelector('.popup__close-button');
 const popupImageCaption = popupImage.querySelector('.popup-image__occupation');
-closePopupImageButton.addEventListener('click', closePopupImage);
+popupCloseImageButton.addEventListener('click', closePopupImage);
 
 function openPopup(popup){
   popup.classList.add('popup_opened');
@@ -76,8 +75,7 @@ const deleteCards = element => {
 
 
 const createCard = (card) => {
-  const newCard = document.querySelector('#element__template').content.cloneNode(true);
-  const cardElement = newCard.querySelector('.element');
+  const newCard = cardTemplate.cloneNode(true).content.querySelector('.element');
   const cardTitle = newCard.querySelector('.element__text'); 
   cardTitle.textContent = card.name;
  const cardImage = newCard.querySelector('.element__img');

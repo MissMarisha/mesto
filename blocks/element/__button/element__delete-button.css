@@ -9,3 +9,7 @@ position: absolute;
 transform: translate(244px,20px);
 cursor: pointer;
 }
+
+.element__delete-button:hover{
+    opacity: 0.6;
+}
