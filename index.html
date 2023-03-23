@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./pages/index.css" >
     <script src="./scripts/initial-cards.js" defer></script>
     <script src="./scripts/index.js" defer></script>
+    <script src ="./scripts/validate.js" defer></script>
     <title>Место</title>
   </head>
   <body class="body">
@@ -20,27 +21,26 @@
             <div class="profile__info">
               <div class="profile__info-row">
                 <h1 class="profile__name">Жак-Ив Кусто</h1>
-                <button type="button" class="profile__edit-button">
+                <button type="button" class=" profile__edit-button">
                 <img src="./images/white-pan.svg" alt="Редактировать">
                 </button> 
               </div>
               <p class="profile__occupation">Исследователь океана</p>
             </div>
           </div>
-          <button type="button" class="profile__add-button"></button>
+          <button type="button" class=" profile__add-button"></button>
         </section>
         <section class="elements">
           <template id="element__template">
-          <div class="element">
-            <img class="element__img" src="images/kirill-pershin-1088404-unsplash.jpg" alt="#">
-            <button class="element__delete-button" type="button"></button>
-            <div class="element__description">
-              <h2 class="element__text">Карачаевск</h2>
-              <button class="element__like" type="button"></button>
+            <div class="element">
+              <img class="element__img" src="images/kirill-pershin-1088404-unsplash.jpg" alt="#">
+              <button class="element__delete-button" type="button"></button>
+              <div class="element__description">
+                <h2 class="element__text">Карачаевск</h2>
+                <button class="element__like" type="button"></button>
+              </div>
             </div>
-          </div>
-        </template>
-         
+          </template>
         </section>
       </main>
       <footer class="footer page__content">
@@ -48,12 +48,14 @@
       </footer>
     </div>
     <div class="popup popup-profile">
-      <div class="popup__container">
+      <div class="popup__container ">
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form name="editProfileForm" class="popup__form">
-          <input name ="Name" class="popup__input popup__input_type_name" type="text" placeholder="Имя">
-          <input name = "Job" class="popup__input popup__input_type_job" type="text" placeholder="Должность">
-          <button type="submit" class="popup__save-button">
+        <form name="profile-form" class="popup-profile__form form" novalidate>
+          <input name="profile-name" class="form__input form__input_type_name" type="text" placeholder="Имя" minlength="2" maxlength="40" required>
+          <span class="form__text-error form__text-error_type_profile-name">Вы пропустили это поле</span>
+          <input name ="profile-profession" class="form__input form__input_type_job" type="text" placeholder="Должность" minlength="2" maxlength="200" required>
+          <span class="form__text-error form__text-error_type_profile-profession"></span>
+          <button type="submit" class="popup__save-button popup__button">
           Сохранить
           </button>
         </form>
@@ -63,14 +65,16 @@
     <div class="popup popup-card">
       <div class="popup__container">
         <h2 class="popup__title">Новое место</h2>
-        <form name="formCard" class="popup__form popup__form_card">
-          <input name ="card-name" class="popup__input" type="text" placeholder="Название">
-          <input name = "card-link" class="popup__input" type="url" placeholder="Ссылка на картинку">
-          <button type="submit" class="popup__save-button">
+        <form name="card-form" class="popup-card__form form" novalidate>
+          <input name ="card-name" class=" form__input" type="text" visible placeholder="Название" minlength="2" maxlength="30" required>
+          <span class="form__text-error form__text-error_type_card-name"></span>
+          <input name = "card-link" class=" form__input" type="url" placeholder="Ссылка на картинку" required>
+          <span class="form__text-error form__text-error_type_card-link"></span>
+          <button type="submit" class="popup__save-button popup__button" disabled>
           Сохранить
           </button>
         </form>
-        <button type="button" class="popup__close-button popup-card__close-button"></button>
+        <button type="button" class="popup__close-button popup-card__close-button" ></button>
       </div>
     </div>
     <div class="popup popup-image">
@@ -83,4 +87,4 @@
       </div>
     </div>
   </body>
-</html> 
+</html>
